@@ -1,15 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int[] numbers = {4,39,19,0,56,83,2,76,10,94,21,12,94,76,46,24};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for(int i = 1; i < numbers.length; i++){
+            int key = numbers[i];
+            int j = i-1;
+            while(j >= 0 && numbers[j] > key){
+                numbers[j+1] = numbers[j];
+                j--;
+            }
+            numbers[j+1] = key;
+        }
+        for(int i = 0; i < numbers.length; i++){
+            System.out.println(numbers[i]);
         }
     }
 }

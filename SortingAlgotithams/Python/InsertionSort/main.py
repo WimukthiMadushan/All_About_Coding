@@ -1,16 +1,13 @@
-# This is a sample Python script.
+numbers = [42, 7, 89, 15, 63, 28, 97, 54, 3, 36, 21, 76, 12, 88, 5, 67, 45, 90, 33, 18]
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+for i in range(len(numbers)):
+    key  = numbers[i]
+    j = i-1
+    while j >= 0  and  numbers[j] > key:
+        numbers[j+1] = numbers[j]
+        j = j-1
+    numbers[j+1] = key
+print(numbers)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
