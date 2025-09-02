@@ -1,15 +1,49 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+       //FindSubstring();
+       FindAndCountSubstringWithOverlap();
+       FindAndCountSubstringWithOutOverlap();
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    public static void FindSubstring(){
+        String text = "hello world";
+        String pattern = "world";
+        if(text.contains(pattern)){
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
         }
     }
+
+    public static void FindAndCountSubstringWithOverlap(){
+        String text = "aababa";
+        String pattern = "aba";
+
+        int count = 0;
+        int index = 0;
+
+        while ((index = text.indexOf(pattern, index)) != -1){
+            count++;
+            index++;
+        }
+
+        System.out.println("Count (with overlap): " + count);
+    }
+
+    public static void FindAndCountSubstringWithOutOverlap(){
+        String text = "ababa";
+        String pattern = "aba";
+
+        int index = 0;
+        int count = 0;
+
+        while((index = text.indexOf(pattern, index)) != -1){
+            count++;
+            index += pattern.length();
+        }
+        System.out.println("Count (without overlap): " + count);
+
+    }
+
 }
