@@ -28,6 +28,8 @@ Just like bubbles rising to the surface, the largest elements "bubble up" to the
 - **In-place algorithm** – does not require extra memory.
 - **Easy to implement** – great for teaching and small datasets.
 
+![alt text](Images/image.png)
+
 ---
 
 ### 🧩 Insertion Sort Algorithm – A Simple Yet Smart Sort
@@ -63,3 +65,5 @@ The algorithm works by taking each element and **inserting** it into its correct
 ---
 
 🔹 _Insertion Sort shines in scenarios where the array is already mostly sorted. While not the fastest on large datasets, it’s easy to implement and understand, making it a great choice for learning fundamental sorting logic._
+
+![alt text](Images/image-1.png)
